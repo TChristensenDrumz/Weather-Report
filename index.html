@@ -8,9 +8,25 @@
         <title>Weather Report</title>
     </head>
     <body>
+        <header>
+            <h1>Weather Report</h1>
+            <h2>Get forecasts for your cities!</h2>
+        </header>
         <div class="container">
             <div class="row">
-                <div class="col-md-3">Buttons</div>
+                <div class="col-md-3 buttons">
+                    <form class="form-inline">
+                        <div class="form-group mb-2">
+                          <label for="staticEmail2" class="sr-only">Email</label>
+                          <input type="text" readonly class="form-control-plaintext" id="enter-city" value="Enter a city">
+                        </div>
+                        <div class="form-group mx-sm-3 mb-2">
+                          <label for="inputCity" class="sr-only">City</label>
+                          <input class="form-control" id="inputCity" placeholder="City">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2" id="search">Search</button>
+                      </form>
+                </div>
                 <div class="col-md-9">
                     <div class="row">
                         <div class="col-md-12">Main Info</div>
