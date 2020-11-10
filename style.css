@@ -1,3 +1,20 @@
 header {
     text-align: center;
 }
+
+.safe {
+    background-color: green;
+    color: white;
+}
+
+.moderate {
+    background-color: yellow;
+}
+
+.high {
+    background-color: orange;
+}
+
+.danger {
+    background-color: red;
+}
