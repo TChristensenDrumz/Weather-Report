@@ -8,13 +8,17 @@
         <title>Weather Report</title>
     </head>
     <body>
+        <!-- Title -->
         <header>
             <h1>Weather Report</h1>
             <h2>Get forecasts for your cities!</h2>
         </header>
+        <!-- Container for the page -->
         <div class="container">
             <div class="row">
+                <!-- City buttons are stored here -->
                 <div class="col-md-3 buttons">
+                    <!-- Form for adding cities -->
                     <form class="form-inline">
                         <div class="form-group mb-2">
                           <label for="staticEmail2" class="sr-only">Email</label>
@@ -27,7 +31,9 @@
                         <button type="submit" class="btn btn-primary mb-2" id="search">Add City</button>
                     </form>
                 </div>
+                <!-- Div for displaying all weather -->
                 <div class="col-md-9">
+                    <!-- Div for displaying current weather -->
                     <div class="row">
                         <div class="col-md-12 today">
                             <div id="main"></div>
@@ -37,6 +43,7 @@
                             <div id="uvi"></div>
                         </div>
                     </div>
+                    <!-- Div for displaying 5-day forecast -->
                     <div class="row row-cols-5">
                         <div class="col"></div>
                         <div class="col"></div>

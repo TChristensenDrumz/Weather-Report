@@ -4,6 +4,7 @@ var index = [5, 12, 21, 29, 37];
 
 init();
 
+// Initializes the page with saved user cities
 function init(){
     if(localStorage.getItem("user-cities") !== null){
         var cities = JSON.parse(localStorage.getItem("user-cities"));
@@ -12,8 +13,17 @@ function init(){
             $(".buttons").append(newButton);
         }
     }
+    if(localStorage.getItem("last-visited") !== null){
+        var lastVisited = localStorage.getItem("last-visited");
+
+        $(".col").attr("style", "background-color: turquoise;");
+        
+        getWeather(lastVisited);
+        getForecast(lastVisited);
+    }
 }
 
+// Function adds new button with user inputed city
 $("#search").on("click", function(event){
     event.preventDefault();
     if($("#inputCity").val() !== ""){
@@ -26,6 +36,7 @@ $("#search").on("click", function(event){
     }
 });
 
+// Stores all user city buttons to local storage
 function storeCities(){
     var cities = $(".cities");
     var userCities = [];
@@ -36,6 +47,7 @@ function storeCities(){
     localStorage.setItem("user-cities", JSON.stringify(userCities));
 }
 
+// Calls OpenWeather API and displays weather for desired city
 function getWeather(city){
     $.ajax({
         url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + apiKey,
@@ -59,6 +71,8 @@ function getWeather(city){
     });
 }
 
+// Calls OpenWeather API and displays UVI for desired city
+// Function adds a safety class determined by the UV index number
 function getUVI(lat, lon){
     $.ajax({
         url: "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey,
@@ -82,6 +96,7 @@ function getUVI(lat, lon){
     });
 }
 
+// Calls OpenWeather API and displays weather forecast for desired city
 function getForecast(city){
     $.ajax({
         url: "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + apiKey,
@@ -106,9 +121,12 @@ function getForecast(city){
     });
 }
 
+// Runs functions with the city of the button clicked
 $(document).on("click", ".cities", function(){
     $(".col").attr("style", "background-color: turquoise;");
     
     getWeather($(this).text());
     getForecast($(this).text());
+
+    localStorage.setItem("last-visited", $(this).text());
 });
