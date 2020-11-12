@@ -2,13 +2,39 @@ var apiKey = "28f1a1d1d41e500695c02fdd28b46d2a";
 var forecast = $(".col");
 var index = [5, 12, 21, 29, 37];
 
+init();
+
+function init(){
+    if(localStorage.getItem("user-cities") !== null){
+        var cities = JSON.parse(localStorage.getItem("user-cities"));
+        for(let i = 0; i < cities.length; i++){
+            var newButton = $("<button>").attr("class", "cities").text(cities[i]);
+            $(".buttons").append(newButton);
+        }
+    }
+}
+
 $("#search").on("click", function(event){
     event.preventDefault();
     if($("#inputCity").val() !== ""){
         var newButton = $("<button>").attr("class", "cities").text($("#inputCity").val());
         $(".buttons").append(newButton);
+        
+        $("#inputCity").val("");
+
+        storeCities();
     }
 });
+
+function storeCities(){
+    var cities = $(".cities");
+    var userCities = [];
+    for(let i = 0; i < cities.length; i++){
+        userCities.push($(cities[i]).text());
+    }
+
+    localStorage.setItem("user-cities", JSON.stringify(userCities));
+}
 
 function getWeather(city){
     $.ajax({

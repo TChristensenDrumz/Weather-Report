@@ -23,3 +23,8 @@ header {
     width: 100%;
     text-align: center;
 }
+
+#main {
+    font-weight: bold;
+    font-size: 32px;
+}
