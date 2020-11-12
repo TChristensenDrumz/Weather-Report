@@ -18,3 +18,8 @@ header {
 .danger {
     background-color: red;
 }
+
+.cities {
+    width: 100%;
+    text-align: center;
+}
