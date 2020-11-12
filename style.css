@@ -1,22 +1,30 @@
 header {
     text-align: center;
+    background-color: turquoise;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .safe {
     background-color: green;
     color: white;
+    padding: 0.5rem;
 }
 
 .moderate {
     background-color: yellow;
+    padding: 0.5rem;
 }
 
 .high {
     background-color: orange;
+    padding: 0.5rem;
 }
 
 .danger {
     background-color: red;
+    padding: 0.5rem;
 }
 
 .cities {
@@ -27,4 +35,28 @@ header {
 #main {
     font-weight: bold;
     font-size: 32px;
+}
+
+.buttons {
+    padding-top: 1rem;
+}
+
+.cities {
+    background-color: turquoise;
+    color: white;
+    border-color: teal;
+    border-radius: 20px;
+}
+
+.col {
+    color: white;
+    padding-bottom: 1rem;
+}
+
+.today {
+    padding-bottom: 2rem;
+}
+
+#uvi {
+    padding-top: 0.5rem;
 }

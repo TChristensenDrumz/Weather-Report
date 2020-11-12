@@ -107,6 +107,8 @@ function getForecast(city){
 }
 
 $(document).on("click", ".cities", function(){
+    $(".col").attr("style", "background-color: turquoise;");
+    
     getWeather($(this).text());
     getForecast($(this).text());
 });
