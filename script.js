@@ -17,7 +17,7 @@ function init(){
         var lastVisited = localStorage.getItem("last-visited");
 
         $(".col").attr("style", "background-color: turquoise;");
-        
+
         getWeather(lastVisited);
         getForecast(lastVisited);
     }
@@ -35,6 +35,12 @@ $("#search").on("click", function(event){
         storeCities();
     }
 });
+
+$("#clear").on("click", function(){
+    $(".buttons").empty();
+
+    storeCities();
+})
 
 // Stores all user city buttons to local storage
 function storeCities(){

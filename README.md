@@ -8,8 +8,15 @@ The weather dashboard form input allows you to enter and add cities to your dash
 <hr>
 
 ### Weather Display
-
+When a city button is clicked, the weather for that city will be displayed to the right. The display contains the following data: city name and day, icon displaying weather conditions, current temperature, humidity, wind speed, and the UV index. The UV index will range from green to red, green being safe and red being severe.
 <hr>
+
+### 5-Day Forecast
+In addition to displaying the current weather, the city's 5-day forecast will be included underneath the main display. Each day will include the calendar date, predicted temperature, and predicted humidity.
+<hr>
+
+### Local Storage
+Whenever you add a city to your 
 
 
 ## Credits
