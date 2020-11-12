@@ -4,7 +4,7 @@ This project is a weather forecast site that incorporates the OpenWeather API to
 
 ## Features
 ### Weather Dashboard w/ Form Inputs
-The weather dashboard form input allows you to enter and add cities to your dashboard. Added cities will appear as buttons that, when clicked, will display the weather forecast for that city 
+The weather dashboard form input allows you to enter and add cities to your dashboard. Added cities will appear as buttons that, when clicked, will display the weather forecast for that city. You can clear all your cities at any time using the clear button.
 <hr>
 
 ### Weather Display
@@ -16,7 +16,7 @@ In addition to displaying the current weather, the city's 5-day forecast will be
 <hr>
 
 ### Local Storage
-Whenever you add a city to your 
+Whenever you add a city to your dashboard, it will be saved to local storage along with the rest of your cities. Whenever you reload the page, all your saved cities will be displayed along with the weather forcast of the last city you viewed.
 
 
 ## Credits
