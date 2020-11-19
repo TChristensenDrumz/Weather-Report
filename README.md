@@ -31,5 +31,3 @@ https://openweathermap.org/
 
 ## Link
 https://tchristensendrumz.github.io/Weather-HW/
-
-**Screenshot provided in images folder**
