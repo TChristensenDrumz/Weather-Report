@@ -1,4 +1,4 @@
-# Weather-HW
+# Weather-Report
 
 This project is a weather forecast site that incorporates the OpenWeather API to give real time weather forecasts. This site is designed for travelers who want to see weather forecasts for multiple cities so they can plan their trip accordingly.
 
